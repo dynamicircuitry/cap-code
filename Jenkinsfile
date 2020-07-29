@@ -6,10 +6,8 @@ pipeline {
 				sh 'tidy -q -e *.html'
 			}
 		}
-	
-	agent { dockerfile true }
-    	
-        	stage('Test') {
+        	stage('Docker Build') {
+		agent { dockerfile true }
             		steps {
                 		sh 'node --version'
                 		sh 'svn --version'
