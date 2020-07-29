@@ -6,9 +6,9 @@ pipeline {
 				sh 'tidy -q -e *.html'
 			}
 		}
-	}
+	
 	agent { dockerfile true }
-    	stages {
+    	
         	stage('Test') {
             		steps {
                 		sh 'node --version'
